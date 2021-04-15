@@ -1,0 +1,5 @@
+pandas
+icalendar
+pytz
+PySimpleGUI
+py2app
