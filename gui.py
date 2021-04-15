@@ -4,13 +4,26 @@ import subprocess
 import os
 from random import randint
 
+APP_NAME = 'Member Decision'
+
 class WindowTools:
     def __init__(self, title = '', layout = [[sg.Text('Sample')]]):
         self.layout = layout
+        self.menu_def = [
+            ['Menu', ['About {}'.format(APP_NAME)]],
+        ]
+
+        # Add MenuBar
+        self.layout.insert(0, [sg.Menu(self.menu_def, font = sg.DEFAULT_FONT)])
+
         self.window = sg.Window(title, self.layout, font = ('Helvetica', 20), size = (1200, 675), element_justification='center', resizable = True)
 
     def read(self):
         self.event, self.values = self.window.read()
+        if self.event == 'About {}'.format(APP_NAME):
+            with open('about.txt', mode = 'r', encoding = 'utf_8') as f:
+                lcns = f.read()
+            sg.PopupOK(lcns, modal= False, keep_on_top= True, title = 'About {}'.format(APP_NAME))
 
 
 sg.theme('Dark Blue 3')  # please make your creations colorful
