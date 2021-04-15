@@ -16,7 +16,7 @@ sys.setrecursionlimit(10 ** 9)
 
 
 # ------------------------ ここを変更 --------------------------------
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 VERSION_PYTHON = '{0}.{1}'.format(sys.version_info.major, sys.version_info.minor)
 APP_NAME = 'member_decision'
 DESCRIPTION = 'You can decide the member who join "Gomisute" and "Kagishime".'
@@ -26,7 +26,7 @@ EMAIL = '{0}@{1}'.format('yu.9824', 'gmail.com')
 
 # py2app用の変数
 SRC = ['gui.py']
-DATA_FILES = ['LICENSE']
+DATA_FILES = ['LICENSE', 'about.txt']
 with open('requirements.txt') as requirements_file:
     PKGS = requirements_file.read().splitlines()
 ICON = os.path.join('icon', '{}.icns'.format(APP_NAME))
