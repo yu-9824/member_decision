@@ -37,7 +37,7 @@ main = WindowTools(layout = [
     [sg.Text()],
     [sg.Submit('Run'), sg.Cancel()],
     [sg.Text()],
-    [sg.Frame('Options', [[sg.Text('seed', justification= 'center', size = (10, 1)), sg.InputText(None, key = 'seed', size = (7, 1))]], element_justification='center')],
+    [sg.Frame('Options', [[sg.Text('seed', justification= 'center', size = (10, 1)), sg.InputText('None', key = 'seed', size = (7, 1))]], element_justification='center')],
 ])
 
 popup_options = {
