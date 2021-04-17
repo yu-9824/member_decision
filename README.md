@@ -4,8 +4,8 @@
 You can install OS X app [here](https://github.com/yu-9824/member_decision/releases).
 
 ## How to use
-You will need to use a template like the one shown in the [example](https://github.com/yu-9824/member_decision/tree/main/example).<br>
-We also show you the results of running the program in the [example](https://github.com/yu-9824/member_decision/tree/main/example).
+You will need to use a template like the one shown in the [example](example).<br>
+We also show you the results of running the program in the [example](example).
 
 That way, you can automatically draw lots considering the schedules of "Gomisute" and "Kagishime" with reproducibility.<br>
 - You can get `seed` to reproduce.
