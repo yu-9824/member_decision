@@ -29,6 +29,8 @@ SRC = ['gui.py']
 DATA_FILES = ['LICENSE', 'about.txt']
 with open('requirements.txt') as requirements_file:
     PKGS = requirements_file.read().splitlines()
+if 'py2app' in PKGS:
+    PKGS.remove('py2app')
 ICON = os.path.join('icon', '{}.icns'.format(APP_NAME))
 # --------------------------------------------------------------------
 
@@ -98,8 +100,8 @@ if 'py2app' in sys.argv:
     )
 
     # aliasモードじゃないとき．
-    # if not alias:
-    #     {copyfile(f, os.path.join(frameworks_path, os.path.basename(f))) for f in dylib_files}
+    if not alias:
+        {copyfile(f, os.path.join(frameworks_path, os.path.basename(f))) for f in dylib_files}
 else:
     with open('requirements.txt') as requirements_file:
         install_requirements = requirements_file.read().splitlines()
